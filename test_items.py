@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 
 def test_espaniolLocation(browser,link):
     browser.get(link)
-    time.sleep(3)
+    time.sleep(30)
     button = WebDriverWait(browser, 25).until(EC.presence_of_element_located((By.CSS_SELECTOR, "button.btn-add-to-basket")))
     assert button is not None, "Button not found"
     assert (button.text=="Añadir al carrito")
